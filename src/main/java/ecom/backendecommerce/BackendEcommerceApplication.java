@@ -22,11 +22,27 @@ public class BackendEcommerceApplication {
 		SpringApplication.run(BackendEcommerceApplication.class, args);
 	}
 
-	//@Bean
+//	@Bean
 	public CommandLineRunner commandLineRunner(ProductRepository productRepository){
 		return args -> {
 			List<Product> products = List.of(new Product(null,"Computer",1400.0,true),
 											 new Product(null,"Printer",3000.0,false),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
+					                   	     new Product(null,"Smart Phone",1800.0,true),
+					                   	     new Product(null,"Computer",1800.0,true),
 					                   	     new Product(null,"Smart Phone",1800.0,true),
 											 new Product(null,"Laptop",4000.0,false));
 
