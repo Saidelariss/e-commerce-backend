@@ -55,7 +55,7 @@ public class CurrentProductController {
 
     }
 
-    @PostMapping("/product")
+    @PostMapping("/addProduct")
     public boolean addProduct(@RequestBody Product p){
         productRepository2.save(p);
         return true;
@@ -83,7 +83,7 @@ public class CurrentProductController {
         return false;
     }
 
-    @PostMapping("/product")
+    @PostMapping("/updateProduct")
     public Product updateProduct(@RequestBody Product pr) throws Exception {
         Optional<Product> p = productRepository2.findById(pr.getId());
         if(p.isPresent()){
