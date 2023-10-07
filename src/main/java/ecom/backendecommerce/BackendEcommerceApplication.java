@@ -52,16 +52,21 @@ public class BackendEcommerceApplication {
 		};
 	}
 
-	//@Bean
+//	@Bean
 	public CommandLineRunner commandLineRunner2(UserInfoRepository userInfoRepository,PasswordEncoder passwordEncoder){
 		return args -> {
+
 			UserInfo user1 = new UserInfo(UUID.randomUUID().toString(),"said","1234","ROLE_USER");
-			UserInfo admin = new UserInfo(UUID.randomUUID().toString(),"admin","1234","ROLE_ADMIN,ROLE_USER");
+			UserInfo admin = new UserInfo(UUID.randomUUID().toString(),"adminApp","1234","ROLE_ADMIN");
 			user1.setPassword(passwordEncoder.encode(user1.getPassword()));
 			admin.setPassword(passwordEncoder.encode(admin.getPassword()));
 			userInfoRepository.save(user1);
 			userInfoRepository.save(admin);
 		};
 	}
+
+
+		
+
 
 }
